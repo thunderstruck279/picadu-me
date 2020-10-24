@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picadu - Домашняя страница</title>
+    <!-- подключаем стили -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+</head>
+<body>
+    <!-- Создаём шапку сайта -->
+    <header class="header">
+        <!-- блок header-wrapper -->
+        <div class="header-wrapper">
+            <!-- при нажатии на логотип переходим на клавную страницу -->
+            <a href="/html/index.html">
+                <img src="../img/logo.svg" alt="logo: Picadu" class="header-logo-image">
+            </a>
+            <nav class="header-nav">
+                <!-- навигационное меню. Пишется как ul.header-menu>li.header-menu-item*4>a.header-menu-link -->
+                <ul class="header-menu">
+                    <li class="header-menu-item"><a href="#" class="header-menu-link">Свежее</a></li>
+                    <li class="header-menu-item"><a href="#" class="header-menu-link">Лучшее</a></li>
+                    <li class="header-menu-item"><a href="#" class="header-menu-link">Горячее</a></li>
+                    <li class="header-menu-item"><a href="#" class="header-menu-link">Подписки</a></li>
+                </ul>
+            </nav>
+            <!-- Поле поиска в шапке -->
+            <div class="input-group search">
+                <input type="search" class="input-search" placeholder="Поиск по сайту">
+                <button class="search-button">
+                    <img src="../img/search.svg" alt="icon: search" class="search-icon">
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- контент на странице -->
+    <div class="content">
+        <!-- посты -->
+        <main class="posts">
+            <section class="post">
+                <div class="post-body">
+                    <!-- заголовки и текст -->
+                    <h2 class="post-title">Заголовок поста</h2>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <!-- хэштеги -->
+                    <div class="tags">
+                        <a href="#" class="tag">#свежее</a>
+                        <a href="#" class="tag">#горячее</a>
+                        <a href="#" class="tag">#моё</a>
+                        <a href="#" class="tag">#случайность</a>
+                    </div>
+                </div>
+                <!-- футер поста -->
+                <div class="post-footer">
+                    <!-- кнопки -->
+                    <div class="post-buttons">
+                        <!-- лайки -->
+                        <button class="post-button likes">
+                            <svg width="19" height="20" class="icon icon-like">
+                                <use xlink:href="../img/icons.svg#likes"></use>
+                            </svg>
+                            <!-- счётчик лайков -->
+                            <span class="likes-counter">26</span>
+                        </button>
+                        <!-- комментарии -->
+                        <button class="post-button comments">
+                            <svg width="21" height="21" class="icon icon-comments">
+                                <use xlink:href="../img/icons.svg#comments"></use>
+                            </svg>
+                            <!-- счётчик комментариев -->
+                            <span class="comments-counter">157</span>
+                        </button>
+                        <!-- сохранить -->
+                        <button class="post-button save">
+                            <svg width="19" height="19" class="icon icon-save">
+                                <use xlink:href="../img/icons.svg#save"></use>
+                            </svg>
+                        </button>
+                        <!-- поделиться -->
+                        <button class="post-button share">
+                            <svg width="17" height="19" class="icon icon-share">
+                                <use xlink:href="../img/icons.svg#share"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- сведения об авторе -->
+                    <div class="post-author">
+                        <!-- текст о авторе -->
+                        <div class="author-about">
+                            <a href="#" class="author-username">Человек Никто</a>
+                            <span class="post-time">23 октября</span>
+                        </div>
+                        <!-- аватарка -->
+                        <a href="#" class="author-link">
+                            <img src="../img/avatar.jpg" alt="logo: avatar" class="author-avatar">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="post">
+                <div class="post-body">
+                    <!-- заголовки и текст -->
+                    <h2 class="post-title">Заголовок поста</h2>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                        Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало
+                        безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                        Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало
+                        безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                        Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало
+                        безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                        <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                            Предупредила,
+                            своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало
+                            безопасную даль
+                            дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                            послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                            <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                Предупредила,
+                                своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало
+                                безопасную даль
+                                дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                                послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <!-- хэштеги -->
+                    <div class="tags">
+                        <a href="#" class="tag">#свежее</a>
+                        <a href="#" class="tag">#горячее</a>
+                        <a href="#" class="tag">#моё</a>
+                        <a href="#" class="tag">#случайность</a>
+                    </div>
+                </div>
+                <!-- футер поста -->
+                <div class="post-footer">
+                    <!-- кнопки -->
+                    <div class="post-buttons">
+                        <!-- лайки -->
+                        <button class="post-button likes">
+                            <svg width="19" height="20" class="icon icon-like">
+                                <use xlink:href="../img/icons.svg#likes"></use>
+                            </svg>
+                            <!-- счётчик лайков -->
+                            <span class="likes-counter">26</span>
+                        </button>
+                        <!-- комментарии -->
+                        <button class="post-button comments">
+                            <svg width="21" height="21" class="icon icon-comments">
+                                <use xlink:href="../img/icons.svg#comments"></use>
+                            </svg>
+                            <!-- счётчик комментариев -->
+                            <span class="comments-counter">157</span>
+                        </button>
+                        <!-- сохранить -->
+                        <button class="post-button save">
+                            <svg width="19" height="19" class="icon icon-save">
+                                <use xlink:href="../img/icons.svg#save"></use>
+                            </svg>
+                        </button>
+                        <!-- поделиться -->
+                        <button class="post-button share">
+                            <svg width="17" height="19" class="icon icon-share">
+                                <use xlink:href="../img/icons.svg#share"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- сведения об авторе -->
+                    <div class="post-author">
+                        <!-- текст о авторе -->
+                        <div class="author-about">
+                            <a href="#" class="author-username">Человек Никто</a>
+                            <span class="post-time">23 октября</span>
+                        </div>
+                        <!-- аватарка -->
+                        <a href="#" class="author-link">
+                            <img src="../img/avatar.jpg" alt="logo: avatar" class="author-avatar">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="post">
+                <div class="post-body">
+                    <!-- заголовки и текст -->
+                    <h2 class="post-title">Заголовок поста</h2>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                        Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало
+                        безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                        Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало
+                        безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <p class="post-text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                        Предупредила,
+                        своих. Толку там имени о большой пунктуация, злых взгляд одна, коварных буквоград что, использовало
+                        безопасную даль
+                        дал путь! Вопроса проектах, продолжил свое большой страну маленькая текстов! Взгляд пустился, путь которой
+                        послушавшись скатился страна своих там моей повстречался всемогущая инициал.</p>
+                    <!-- хэштеги -->
+                    <div class="tags">
+                        <a href="#" class="tag">#свежее</a>
+                        <a href="#" class="tag">#горячее</a>
+                        <a href="#" class="tag">#моё</a>
+                        <a href="#" class="tag">#случайность</a>
+                    </div>
+                </div>
+                <!-- футер поста -->
+                <div class="post-footer">
+                    <!-- кнопки -->
+                    <div class="post-buttons">
+                        <!-- лайки -->
+                        <button class="post-button likes">
+                            <svg width="19" height="20" class="icon icon-like">
+                                <use xlink:href="../img/icons.svg#likes"></use>
+                            </svg>
+                            <!-- счётчик лайков -->
+                            <span class="likes-counter">26</span>
+                        </button>
+                        <!-- комментарии -->
+                        <button class="post-button comments">
+                            <svg width="21" height="21" class="icon icon-comments">
+                                <use xlink:href="../img/icons.svg#comments"></use>
+                            </svg>
+                            <!-- счётчик комментариев -->
+                            <span class="comments-counter">157</span>
+                        </button>
+                        <!-- сохранить -->
+                        <button class="post-button save">
+                            <svg width="19" height="19" class="icon icon-save">
+                                <use xlink:href="../img/icons.svg#save"></use>
+                            </svg>
+                        </button>
+                        <!-- поделиться -->
+                        <button class="post-button share">
+                            <svg width="17" height="19" class="icon icon-share">
+                                <use xlink:href="../img/icons.svg#share"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- сведения об авторе -->
+                    <div class="post-author">
+                        <!-- текст о авторе -->
+                        <div class="author-about">
+                            <a href="#" class="author-username">Человек Никто</a>
+                            <span class="post-time">23 октября</span>
+                        </div>
+                        <!-- аватарка -->
+                        <a href="#" class="author-link">
+                            <img src="../img/avatar.jpg" alt="logo: avatar" class="author-avatar">
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- сайдбар -->
+        <aside class="sidebar">
+            <!-- блок с информацией о пользователе -->
+            <div class="user">
+                <div class="user-info">
+                    <!-- аватарка пользователя -->
+                    <img src="../img/user-avatar.jpg" alt="photo: user" height="40" width="40" class="user-avatar">
+                    <!-- имя пользователя -->
+                    <span class="user-name">thunderstruck279</span>
+                </div>
+                <!-- ссылка на выход из аккаунта -->
+                <a href="#" class="exit">
+                    <svg width="20" height="20" class="icon icon-exit">
+                        <use xlink:href="../img/icons.svg#exit"></use>
+                    </svg>
+                </a>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

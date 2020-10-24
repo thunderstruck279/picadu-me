@@ -1,0 +1,313 @@
+/* позволяет считать правильно длину и высоту элементов */
+*{
+    box-sizing:border-box;
+}
+/* body - для всего документа */
+body{
+   /* включить шрифт без засечек */
+    font-family: sans-serif; 
+    background: #E5E5E5;
+}
+.header{
+    /* прописываем цвет фона */
+    background: #FA8C16;
+    /* отступ сверху pt16 */
+    padding-top: 16px;
+    /* отступ снизу pb16 */
+    padding-bottom: 16px;
+    /* отступом слева и справа лучше не пользоваться. Лучше ограничить рабочую область и выровнять margin-ом по центру */
+    /* тень под шапкой */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.header-wrapper{
+    /* Задаём область с контентом в шапке */
+    /* Обводка области с контентом */
+    /* border: 1px solid black; */
+    /* ширина области с контентом w1200  Минус - рабочая область всегда будет 1200, даже если размер остался меньше, чем 1200*/
+    /*width: 1200px;*/
+    /* так будет отображаться максимальный размер рабочей области 1200 */
+    max-width: 1200px;
+    min-width: 625px;
+    /* так если места мало, будет отображаться 90% от максимального */
+    width: 90%;
+    /* выравнивание рабочей области */
+    margin: auto;
+    /* Элементы внутри материнского класса выстроятся в ряд, а не в столбик */
+    display: flex;
+    /* равномерно распределить элементы внутри материнского класса по рабочей области */
+    justify-content: space-between;
+    /* выравнивание всех элементов внутри материнского класса по середине по вертикали в рабочей области */
+    align-items: center;
+    
+
+}
+/* прописываем стиль для навигации*/
+.header-menu{
+    /* выставить элементы в ряд */
+    display: flex;
+    /* убрать точки у списка */
+    list-style: none;
+    /* отключить отступ в начале списка (отступ слева создаётся по умолчанию при создании списка) */
+    padding: 0;
+    /* отключить отступы снизу и сверху списка */
+    margin: 0;
+    /*не работает, тк header-menu находится в теге header-nav, который обёрнут в header-wrapper   */
+        /* отделить меню от логотипа слева */
+        /* margin-left: 60px; */
+        /* отступ справа auto */
+        /* margin-right: auto; */
+
+    
+}
+.header-nav{
+    /* отделить меню от логотипа слева */
+    margin-left: 60px;
+    /* отступ справа auto */
+    margin-right: auto;
+}
+/* стиль ссылок */
+.header-menu-link{
+    /* отключение всех декораций (подчёркивание и прочее) tdn */
+    text-decoration: none;
+    color: #FAFAFA;
+    /* отступ между пунктами меню. Прописываем для каждого элемента отступ margin, тк один элемент от другого */
+    margin-left: 15px;
+    /* размер шрифта */
+    font-size: 14px;
+    /* высота строки */
+    line-height: 22px;
+
+}
+/* стиль для строки поиска */
+.input-group{
+    /* чтобы считалось, что кнопка и окно поиска - один блок */
+    position: relative;
+    /* фон блока */
+    background: #ffffff;
+    /* скругление */
+    border-radius: 4px;
+    /* чтобы не выходило за пределы блока */
+    overflow: hidden;
+    /* обводка вокруг поиска */
+    border: 1px solid #D9D9D9;
+    /* размеры поиска */
+    width: 237px;
+    height: 32px;
+}
+/* настройка самой поисковой строки */
+.input-search{
+    /* высота 100% от объекта-родителя */
+    height: 100%;
+    /* ширина 80% от объекта родителя */
+    width: 80%;
+    border: none;
+    /* размер шрифта и строки в поиске */
+    font-size: 14px;
+    line-height: 22px;
+      /*цвет текста подсказки меняется при помощи гугла (внизу)  */
+
+}
+/* стиль кнопки поиска */
+.search-button{
+    height: 100%;
+    width: 20%;
+    /* приклеить к правому краю и верху */
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    border: none;
+    background: #ffffff;
+    /* чтобы при наведении менялся курсор */
+    cursor: pointer;
+    /* чтобы картинка было по середине кнопки */
+    display: flex;
+    /* выравнивание по середине по вертикали  */
+    align-items: center;
+    /* выравнивание по середине по горизонтали */
+    justify-content: center;
+
+
+}
+/* применяем для всех возможных браузеров */
+.input-search[type="search"]::-moz-placeholder {color: #BFBFBF; /* Цвет подсказывающего текста */ }
+.input-search[type="search"]::-webkit-input-placeholder { color: #BFBFBF; }
+.input-search[type="search"]:-ms-input-placeholder { color: #BFBFBF; }
+.input-search[type="search"]::-ms-input-placeholder { color: #BFBFBF; }
+.input-search[type="search"]::placeholder { color: #BFBFBF; } 
+
+.content{
+    /* контент на странице должен быть по ширине как поле с контентом в шапке */
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    /* делаем возможность расположения постов и сайдбара рядом */
+    display: flex;
+    /* выравнивание по верхнему краю */
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 95px;
+
+}
+/* настройка окна с постами */
+.posts{
+    /*ширина поста, чтобы удобно было размещать сайдбар */
+    width: 67%;
+}
+/* настройка поста */
+.post{
+    background: #ffffff;
+    border: 1px solid #E8E8E8;
+    padding-top: 35px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    min-width: 415px;
+    
+}
+.post-body {
+    padding-left: 36px;
+    padding-right: 36px;
+    
+}
+/* настройка заголовка поста */
+.post-title{
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 19px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+/* настройка теста поста */
+.post-text{
+    font-size: 14px;
+    line-height: 22px;
+    color: #262626;
+}
+/* настройка хэштегов */
+.tags{
+    margin-bottom: 22px;
+}
+/* применимо к каждому тегу по отдельности */
+.tag{
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #BFBFBF;
+    text-decoration: none;
+}
+/* настройка футера */
+.post-footer{
+    /* фон и граница */
+    background: #FAFAFA;
+    border-top: 1px solid #E8E8E8;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+}
+/* настройка иконок кнопок. У каждой иконки есть класс .icon Применяем удалённый fill */
+.post-footer .icon{
+    fill: #8c8c8c;
+}
+/* настраиваем кнопки. эти параметры можно применять только к кнопкам, а не к классу post-buttons */
+.post-button{
+    background-color: transparent;
+    border: none;
+    /* цвет текста счётчиков */
+    color: #8c8c8c;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 19px;
+    cursor: pointer;
+}
+/* настройка общего класса buttons и выравнивание по центру */
+.post-buttons{
+    display: flex;
+    align-items: center;
+}
+
+/* настройка аватарки */
+.author-avatar{
+    height: 34px;
+    width: 34px;
+    border-radius: 4px;
+}
+/* делаем display flex для элементов внутри .post-author */
+.post-author{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    
+}
+.author-username {
+    /* делаем из author-username отдельный блок. В результате займёт целую строчку */
+    display: block;
+    text-decoration: none;
+    color: #8c8c8c;
+    font-size: 12px;
+    line-height: 20px;  
+
+}
+/* отступ от аватарки автора */
+.author-about {
+    margin-right: 9px;
+}
+/* настройка даты публикации */
+.post-time {
+    font-size: 12px;
+    line-height: 20px;
+    color: #BFBFBF;
+}
+/* отступы счётчиков */
+.likes-counter{
+    margin-left: 6px;
+}
+.comments-counter{
+    margin-left: 6px;
+}
+/* настройка пользовательской аватарки */
+.user-avatar{
+    border-radius: 50%;
+    margin-right: 17px;
+}
+/* общие настройки сайдбара */
+.sidebar{
+    /* 31% чтобы разрыв тоже менялся */
+    width: 31%;
+
+}
+/* настройка элемента с пользователем */
+.user {
+    background-color: #FAFAFA;
+    border: 1px solid #e8e8e8;
+    /* p15-25 - padding top,bottom = 15px; padding left,right = 25px */
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 260px;
+    
+}
+/* настройка информации о пользователе */
+.user-info{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+.icon-exit{
+    fill:black;
+}
